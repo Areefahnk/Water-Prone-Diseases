@@ -1,0 +1,34 @@
+.home_img img {
+    width: -webkit-fill-available;
+    height: 96vh;
+    z-index: -1;
+}
+span.home_img_txt {
+    position: absolute;
+    top: 44%;
+    left: 18%;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 500;
+    font-style: italic;
+}
+
+span.home_img_down.container {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    font-size: 1.25em;
+    color: black;
+    font-weight: 400;
+    margin-top: 1em;
+    /* letter-spacing: px; */
+}
+.row {
+  width: 100%;
+  padding: 8% 8%;
+  grid-gap: 10%;
+  justify-content: center;
+}
+img.card-img-top {
+  height: 50vh;
+}

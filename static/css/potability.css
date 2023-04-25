@@ -1,0 +1,23 @@
+/* form {
+    display: flex;
+    justify-content: center;
+} */
+body{
+    background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+h2 {
+    margin-top: 8%;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.row.container-lg {
+    margin-left: 8%;
+}
+button.btn.btn-primary {
+    width: 5em;
+    height: fit-content;
+    margin-left: 50%;
+}

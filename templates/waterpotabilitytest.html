@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/potability.css">
+    <title>Water Potability Test</title>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html">AI - Water Labs</a>
+        </div>
+    </nav>
+    <h2>Water Potability Test</h2>
+        <form action='/predict' method="post">
+            <div class="row container-lg">
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">pH of water (0 to 14)</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword1" name="n1" placeholder="ph" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Hardness: Capacity of water to precipitate soap in mg/L</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword2" name="n2" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Solids: Total dissolved solids in ppm</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword3" name="n3" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Chloramines: Amount of Chloramines in ppm</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword4" name="n4" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Sulfate: Amount of Sulfates dissolved in mg/L</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword5" name="n5" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Conductivity: Electrical conductivity of water in μS/cm</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword6" name="n6" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Organic_carbon: Amount of organic carbon in ppm</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword7" name="n7" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Trihalomethanes: Amount of Trihalomethanes in μg/L</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword8" name="n8" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Turbidity: Measure of light emitting property in NTU</label>
+                    <input type="number" step="any" class="form-control" id="exampleInputPassword9" name="n9" required>
+                </div>
+
+
+            </div>
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Test
+            </button>
+        </form><br><br>
+        <div style="font-family: cursive, sans-serif;
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 20px 23px #7fecad;">
+      <br>
+        {{pred}}<br>
+            <br>{{inp}}<br>
+
+        </div>
+<!--
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Report</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        Result:{{pred}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</html>
