@@ -78,3 +78,4 @@ wcwidth
 Werkzeug
 wrapt
 zipp
+gunicorn
