@@ -61,7 +61,6 @@ rsa
 scikit-learn
 scipy
 six
-sklearn
 stack-data
 tensorboard
 tensorboard-data-server
